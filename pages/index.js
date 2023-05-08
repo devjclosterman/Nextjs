@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import firstPost from './first-post';
+import FirstPost from '../pages/posts/firstPost';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,13 +13,13 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Learn <a href="https://nextjs.org">Next.js!</a>
+          Learn <Link href="/posts/firstPost">Next.js!</Link>
         </h1>
 
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
         </p>
-
+      
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
@@ -47,6 +48,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+          <FirstPost />
         </div>
       </main>
 
