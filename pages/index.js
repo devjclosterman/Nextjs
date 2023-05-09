@@ -4,16 +4,16 @@ import Head from 'next/head';
 // import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
 import Layout, { siteTitle } from '../pages/components/layout';
-import { getSortedPostsData } from '../lib/posts'; 
+// import { getSortedPostsData } from '../lib/posts'; 
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return  {
-    props: {
-      allPostsData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData();
+//   return  {
+//     props: {
+//       allPostsData,
+//     },
+//   };
+// }
 
 
 export default function Home({ allPostsData }) {
@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+        {/* <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               {title}
@@ -34,7 +34,7 @@ export default function Home({ allPostsData }) {
               {date}
             </li>
           ))}
-        </ul>
+        </ul> */}
         <p>Jr. Software Developer</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
